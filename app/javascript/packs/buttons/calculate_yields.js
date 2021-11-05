@@ -22,12 +22,12 @@ window.onload = function() {
     let bitcoinYield = 0;
     let ethereumYield = 0;
     let cardanoYield = 0;
-    //export const calculateBTCYields = 
+    
     buttonCalculateBTCYields.addEventListener('click', () => {
-        let moneyToInvest = parseFloat(inputBitcoinAmount.value, 10);
+        let moneyinvert = parseFloat(inputBitcoinAmount.value, 10);
         let bitcoinCurrentPrice = parseFloat(document.getElementById("bitcoin-price").textContent, 10);
-        bitcoinYield = moneyToInvest * (1 + 0.05) ** 12 - moneyToInvest;
-        const totalYield = moneyToInvest + bitcoinYield
+        bitcoinYield = moneyinvert * (1 + 0.05) ** 12 - moneyinvert;
+        const totalYield = moneyinvert + bitcoinYield
 
         outputBitcoinYield.value = bitcoinYield.toFixed(2);
         outputTotalBTCYieldUSD.value = totalYield.toFixed(2)
@@ -36,10 +36,10 @@ window.onload = function() {
 
     //export const calculateETHYields = 
     buttonCalculateETHYields.addEventListener('click', () => {
-        let moneyToInvest = parseFloat(inputEthereumAmount.value, 10);
+        let moneyinvert = parseFloat(inputEthereumAmount.value, 10);
         let ethereumCurrentPrice = parseFloat(document.getElementById("ethereum-price").textContent, 10);
-        ethereumYield = moneyToInvest * (1 + 0.042) ** 12 - moneyToInvest;
-        const totalYield = moneyToInvest + ethereumYield;
+        ethereumYield = moneyinvert * (1 + 0.042) ** 12 - moneyinvert;
+        const totalYield = moneyinvert + ethereumYield;
 
         outputEthereumYield.value = ethereumYield.toFixed(2);
         outputTotalETHYieldUSD.value = totalYield.toFixed(2);
@@ -48,11 +48,11 @@ window.onload = function() {
 
     //export const calculateADAYields = 
     buttonCalculateADAYields.addEventListener('click', () => {
-        let moneyToInvest = parseFloat(inputCardanoAmount.value, 10);
+        let moneyinvert = parseFloat(inputCardanoAmount.value, 10);
         let cardanoCurrentPrice = parseFloat(document.getElementById("cardano-price").textContent, 10);
         console.log(cardanoCurrentPrice);
-        cardanoYield = moneyToInvest * (1 + 0.01) ** 12 - moneyToInvest;
-        const totalYield = moneyToInvest + cardanoYield;
+        cardanoYield = moneyinvert * (1 + 0.01) ** 12 - moneyinvert;
+        const totalYield = moneyinvert + cardanoYield;
 
         outputCardanoYield.value = cardanoYield.toFixed(2);
         outputTotalADAYieldUSD.value = totalYield.toFixed(2);
